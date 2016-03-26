@@ -74,7 +74,8 @@ function getAccountNumber() {
 };
 function getTransactions() {
   transactions = artoo.scrapeTable('.hsbcMainContent', {
-    headers: 'th',
+    //headers: 'th',
+      headers: ['Date','Type','Description','Paid out','Paid in','Balance (£)', 'Overdraft']
   });
   return processData(transactions);
 };
